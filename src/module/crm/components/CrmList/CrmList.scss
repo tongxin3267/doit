@@ -1,0 +1,12 @@
+@import '../../crmBase.scss';
+
+.crm_list{
+    position: relative;
+    padding-left: rem(15);
+    &:after{
+        @include underLine;
+    }
+    &:before{
+        @include topLine;
+    }
+}

@@ -1,0 +1,23 @@
+@import '../../../crmBase.scss';
+
+.crm_list_wrap{
+    .letter_box{
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        left: 0;
+        top: rem(45);
+        z-index: 2;
+        width: 100%;
+        background: rgba(100,100,100,0.8);
+        .letter_item{
+            width: rem(75);
+            height: rem(45);
+            line-height: rem(45);
+            color: #fff;
+            font-size: rem(16);
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}

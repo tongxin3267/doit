@@ -1,0 +1,271 @@
+%half-px{
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #F7F7F7;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.qwui-my{
+  & .bg_img{
+    display: inline-block;
+    position:absolute;
+    top:0;
+    width: 100%;
+    height: 212px;
+    background: url(../img/background.png) center no-repeat;
+    background-size: 100% 100%;
+  }
+  & .content{
+    display: block;
+    position: relative;
+    height: 274px;
+    margin: 117px 19px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.12);
+    & .head{
+      position: absolute;
+      top:-38px;
+      left:40%;
+      & .pic img{
+        width:79px;
+        height:79px;
+        background-size:100% 100%;
+        border: 5px solid #fff;
+        border-radius: 50%;
+      }
+      & .name{
+        color:#333;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    & .more{
+      position: absolute;
+      width: 100%;
+      height: 180px;
+      margin-top: 95px;
+      & .function{
+        position: relative;
+        margin:20px 30px 0;
+        height:20%;
+        &:after{
+          @extend %half-px;
+          bottom:0;
+        }
+        & .description{
+          float: left;
+          padding-top: 5px;
+          color:#414141;
+          font-size: 15px;
+          font-weight: bold;
+          & i{
+            display: inline-block;
+            width: 16px;
+            height: 17px;
+            background:url("../img/pay_doc.png") no-repeat;
+            background-size: 50px;
+            vertical-align: middle;
+          }
+          & .doc{
+            background-position: -4px -5px;
+          }
+          & .pay{
+            background-position: -29px -5px;
+          }
+        }
+        & .link{
+          float:right;
+          padding-top: 8px;
+          color:#D6D6D6;
+          font-size: 13px;
+          & i{
+            display: inline-block;
+            width: 6px;
+            height: 12px;
+            margin-left: 6px;
+            background:0 0 url("../../../assets/images/CSSSprites.png") no-repeat;
+            background-size: 72px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    transform: translateX(100%) scale(1);
+  }
+  1%{
+    transform: translateX(0) scale(1);
+  }
+  33.333333%{
+    transform: translateX(0) scale(1);
+  }
+  34.333333%{
+    transform: translateX(-100%) scale(1);
+  }
+  100% {
+    transform: translateX(-100%) scale(1);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .img_box_slider{
+    width: 740px !important;
+  }
+}
+.qwui-login{
+  & .img_box{
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 212px;
+    overflow: hidden;
+    & div{
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+      height: 212px;
+      background-size: cover !important;
+      -webkit-animation: fade-out 18s;
+      animation: fade-out 18s;
+      animation-iteration-count:infinite;/*动画播放次数*/
+      animation-timing-function: linear;
+      animation-fill-mode:both;
+      & span{
+        position: absolute;
+        bottom: 0;
+        padding-left: 5%;
+        width: 95%;
+        line-height: 40px;
+        color: white;
+        text-overflow: ellipsis;
+        font-size: 15px;
+        overflow: hidden;
+        white-space: nowrap;
+        background: -prefix-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+      }
+    }
+    & .default_pic_1{
+      background: url(../img/background1.png) center no-repeat;
+    }
+    & .default_pic_2{
+      background: url(../img/background2.png) center no-repeat;
+    }
+    & .default_pic_3{
+      background: url(../img/background3.png) center no-repeat;
+    }
+    & .bg_img_1{
+      animation-delay: 6s;
+    }
+    & .bg_img_2{
+      animation-delay: 12s;
+    }
+  }
+  & .img_box_slider{
+    position: absolute;
+    top: 212px;
+    height: 28px;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    & .span_list {
+      display: flex;
+      position: relative;
+      padding: 3px 0 0 46%;
+      & div{
+        width: 16px;
+        height: 2px;
+        margin: 5px 2px;
+        background: #fcddde;
+        &.active {
+          background: #ea2200;
+        }
+      }
+    }
+  }
+  & .menu{
+    position: relative;
+    margin-top: 240px;
+    width:100%;
+    height:226px;
+    background: #fff;
+    &:before{
+      @extend %half-px;
+      top:0;
+    }
+    & .itemList{
+      display: flex;
+      position: relative;
+      width:100%;
+      height:113px;
+      &:after{
+        @extend %half-px;
+        bottom:0;
+      }
+      & .item{
+        display: block;
+        position: relative;
+        flex:1;
+        color: #666;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        &:after{
+          content: " ";
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 113px;
+          border-left: 1px solid #F7F7F7;
+        }
+        & .pic{
+          display: inline-block;
+          position: relative;
+          padding-top:16px;
+          & .img{
+            display: inline-block;
+            width: 58px;
+            height: 58px;
+            background: url(../img/login_menu.png);
+            background-size: 348px;
+
+            &.position-1 {
+              background-position: -232px 0;
+            }
+
+            &.position-2 {
+              background-position: 0 0;
+            }
+
+            &.position-3 {
+              background-position: -116px 0;
+            }
+
+            &.position-4 {
+              background-position: -290px 0;
+            }
+
+            &.position-5 {
+              background-position: -58px 0;
+            }
+
+            &.position-6 {
+              background-position: -174px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

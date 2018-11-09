@@ -1,0 +1,30 @@
+@import '../../crmBase.scss';
+
+.crm_select_list{
+    padding-left: rem(15);
+    max-height: rem(160);
+    background: #fcfcfc;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    .select_list_item{
+        position: relative;
+        height: rem(45);
+        font-size: rem(16);
+        color: #333;
+        text-align: left;
+        line-height: rem(45);
+        @include ellipsis;
+        &:after{
+            @include underLine;
+        }
+        &:last-child{
+            &:after{
+                content: normal;
+            }
+        }
+        &.active{
+            color: #467DB9;
+        }
+    }
+}

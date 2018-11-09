@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+// 根节点字体大小
+$baseNum: 12;
+// px转换rem
+@function rem($num){
+	@return ($num/$baseNum)*1rem;
+}
+
+@media screen and (min-width: 1024px){
+  .new-btn {
+    width: 740px!important;
+  }
+}
+
+@mixin content-item($height,$line-height,$color,$fontSize){
+  height: rem($height);
+  line-height: rem($line-height);
+  color: $color;
+  font-size: rem($fontSize);
+}
+
+@import './style/minix.scss';

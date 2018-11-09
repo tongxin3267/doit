@@ -1,0 +1,244 @@
+/**
+ * 详情主体样式
+ * author: 黎国本
+ * date: 2018/6/11
+ */
+
+@charset 'UTF-8';
+
+@keyframes bigger {
+  from {
+    margin: 14px 16px 18px;
+    width: 20px;
+    height: 20px;
+    background: {
+      size: 77px 20px;
+      position: -19px 0;
+    }
+  }
+
+  50% {
+    margin: 9px 11px 13px;
+    width: 30px;
+    height: 30px;
+    background: {
+      size: 116px 30px;
+      position: -29px 0;
+    }
+  }
+
+  to {
+    margin: 14px 16px 18px;
+    width: 20px;
+    height: 20px;
+    background: {
+      size: 77px 20px;
+      position: -19px 0;
+    }
+  }
+}
+
+#qwjs-mainContent {
+  padding: 25px 15px 5px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+
+  .qwui-mainContent_title {
+    h1 {
+      padding-bottom: 12px;
+      color: #333;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.5em;
+    }
+
+    p {
+      color: #888;
+      font-size: 14px;
+    }
+
+    span {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .qwui-mainContent_cover img {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .qwui-mainContent_detail_info {
+      margin-bottom: 16px;
+    }
+  }
+
+  .qwui-mainContent_content {
+    padding: 0 0 15px;
+    font-size: 16px;
+  }
+
+  .qwui-mainContent_tail {
+    font-size: 13px;
+    color: #888;
+
+    .qwui-mainContent_labels {
+      span::after {
+        content: ", ";
+      }
+
+      span:last-child::after {
+        content: "";
+      }
+
+      .qwui-mainContent_icon_label {
+        $icon-size: 14px;
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        margin-right: 5px;
+        width: $icon-size;
+        height: $icon-size;
+        background: {
+          image: url(../img/icon-tips.png);
+          size: 100% 100%;
+          position: center center;
+        }
+      }
+    }
+
+    .qwui-mainContent_reading {
+      margin-left: 10px;
+      color: #586c94;
+    }
+
+    .qwui-mainContent_file {
+      margin-top: 20px;
+    }
+  }
+
+  .qwui-mainContent_function {
+    font-size: 14px;
+    text-align: center;
+
+    a {
+      color: #666;
+    }
+
+    .qwui-mainContent_subscribe {
+      margin: 30px 0;
+
+      a {
+        display: inline-block;
+        text-align: center;
+        font-size: 0px;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+      }
+
+      .qwui-mainContent_icon_subscribe {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 14px 16px 18px;
+        background: {
+          image: url(../img/dz.png);
+          repeat: no-repeat;
+          position: 0;
+          size: 77px 20px;
+        }
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+      }
+
+      .qwui-mainContent_subscribed {
+        border-color: #ffe5c0;
+        background-color: #fff6ea;
+
+        .qwui-mainContent_icon_subscribe {
+          background-position: -19px 0;
+          animation-duration: 1s;
+          animation-name: bigger;
+        }
+      }
+
+      .qwui-mainContent_subscribeList {
+        margin-top: 10px;
+        padding: 10px 7px;
+        color: #666;
+        text-align: left;
+        background-color: #f6f6f6;
+
+        .qwui-mainContent_icon_subscribe {
+          position: relative;
+          top: 1px;
+          margin: 0;
+          width: 15px;
+          height: 15px;
+          background: {
+            image: url(../img/ic_dz.png);
+            size: 100% 100%;
+            position: center center;
+          }
+        }
+
+        .qwui-mainContent_subscribe_name {
+          margin-top: 5px;
+
+          & span {
+            display: inline-block;
+            margin-right: 5px;
+            color: #999;
+
+            &::after {
+              content: ', ';
+            }
+
+            &:last-child {
+              margin: 0;
+
+              &::after {
+                content: '';
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @mixin arrow-icon ($transform: 0deg) {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 15px;
+      vertical-align: -2px;
+      background: url(../img/CSSSprites.png);
+      background-size: 101px 101px;
+      -webkit-transform: rotate($transform);
+      transform: rotate($transform);
+    }
+
+    .navs {
+      line-height: 45px;
+      overflow: hidden;
+
+      .pre {
+        float: left;
+
+        &::before {
+          @include arrow-icon(180deg);
+
+          margin-right: 10px;
+        }
+      }
+
+      .next {
+        float: right;
+
+        &::after {
+          @include arrow-icon;
+
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

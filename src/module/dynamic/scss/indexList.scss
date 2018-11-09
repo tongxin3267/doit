@@ -1,0 +1,140 @@
+%half-px{
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #ddd;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.qwui-party_cons_list{
+  position: relative;
+  padding: 0 15px;
+  margin: 10px 0;
+  background-color: #fff;
+  &:before{
+    @extend %half-px;
+    top: 0;
+  }
+  &:after{
+    @extend %half-px;
+    bottom: 0;
+  }
+  & .qwui-party_cons_top{
+    display: flex;
+    padding-top: 15px;
+    & .content{
+      display: inline-block;
+      width: 75%;
+      vertical-align: middle;
+      & .title{
+        padding-right: 9px;
+        font-size: 17px;
+        font-weight: normal;
+        line-height: 22px;
+        color: #333;
+        overflow: hidden;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        white-space: nowrap;
+        word-wrap: normal;
+        text-overflow: ellipsis;
+        & .topic_top{
+          display: inline-block;
+          width: 14px;
+          height: 15px;
+          line-height: 15px;
+          padding-right: 1px;
+          margin: auto 5px;
+          border: 1px solid #09bb07;
+          border-radius: 2px;
+          text-align: center;
+          vertical-align: middle;
+          font-size: 11px;
+          color: #09bb07;
+        }
+      }
+      & .time{
+        height: inherit;
+        margin-bottom: 5px;
+        padding: 5px 10px 0 0;
+        line-height: 2;
+        font-size: 11px;
+        color: #999;
+      }
+    }
+    & .img_right{
+      display: inline-block;
+      width: 25%;
+      height: 60px;
+      padding-bottom: 10px;
+      overflow: hidden;
+      vertical-align: middle;
+      & img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  & .qwui-party_cons_bottom{
+    position: relative;
+    width: inherit;
+    height: 34px;
+    line-height: 34px;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    text-align: left;
+    color: #999;
+    border-top: none;
+    &:before{
+      @extend %half-px;
+      top: 0;
+    }
+    & .name{
+      display: inline-block;
+      max-width: 144px;
+      margin-right: 5px;
+      font-size: 12px;
+      vertical-align: middle;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    & .delete{
+      display: inline-block;
+      font-size: 12px;
+      color: #6a7fa5;
+      vertical-align: middle;
+    }
+    & .msg_icon{
+      display: inline-block;
+      float: right;
+      & i{
+        display: inline-block;
+        width: 14px;
+        padding-right: 5px;
+        background: url(../../../assets/images/readNumIcon.png) no-repeat;
+        background-size: 14px auto;
+      }
+      & .read{
+        height: 10px;
+        margin-top: -2px;
+        vertical-align: middle;
+      }
+      & .comment{
+        height: 11px;
+        background-position: 0 -12px;
+        vertical-align: -1px;
+      }
+      & .like{
+        width: 12px;
+        height: 12px;
+        background-position: 0 -24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@charset 'UTF-8';
+
+.qwui-file_count {
+  line-height: 38px;
+}
+
+.qwui-file_list {
+  li {
+    padding: 5px 0;
+    overflow: hidden;
+    border-top: 1px solid #dfdfdd;
+
+    &:last-child {
+      border-bottom: 1px solid #dfdfdd;
+    }
+  }
+
+  .qwui-file_ext {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    float: left;
+    background: {
+      size: 100% 100%;
+      position: center center;
+    }
+
+    &.DOC, &.DOCX {
+      background-image: url(./img/word.png);
+    }
+
+    &.TXT {
+      background-image: url(./img/txt.png);
+    }
+
+    &.XLS, &.XLSX {
+      background-image: url(./img/excel.png);
+    }
+
+    &.FILE {
+      background-image: url(./img/file.png);
+    }
+
+    &.MP4 {
+      background-image: url(./img/mp4.png);
+    }
+
+    &.MP3, &.WMA, &.AMR {
+      background-image: url(./img/music.png);
+    }
+
+    &.PDF {
+      background-image: url(./img/pdf.png);
+    }
+
+    &.PPT, &.PPTX {
+      background-image: url(./img/ppt.png);
+    }
+
+    &.RAR, &.ZIP {
+      background-image: url(./img/rar.png);
+    }
+  }
+
+  .qwui-file_name {
+    font-size: 15px;
+    color: #333;
+    overflow: hidden;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+  }
+
+  .qwui-file_size {
+    font-size: 13px;
+    color: #999;
+  }
+
+  .qwui-file_function {
+    float: right;
+    font-size: 0px;
+
+    .qwui-file_function_icon {
+      display: inline-block;
+      width: 36px;
+      text-align: center;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 19px;
+        height: 18px;
+        margin: 11px 0;
+        background: {
+          image: url(./img/qw-operate-icon.png);
+          size: 19px;
+        }
+      }
+
+      &.qwui-file_preview::before {
+        background-position: 0 0;
+      }
+
+      &.qwui-file_download::before {
+        background-position: 0 -18px;
+      }
+    }
+  }
+}

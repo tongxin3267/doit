@@ -1,0 +1,24 @@
+@import '../../../crmBase.scss';
+
+.crm_typeList_wrap{
+    position: relative;
+    &:after{
+        @include underLine;
+    }
+    /deep/ .backTip{
+        background: #f7f7f7;
+    }
+    .tree_wrap{
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 96%;
+            border-bottom: 1px solid #e5e5e5;
+            transform: scaleY(0.5);
+            transform-origin: 0 0;
+        }
+    }
+}

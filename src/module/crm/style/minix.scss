@@ -1,0 +1,29 @@
+// 底线
+@mixin underLine($width: 100%){
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: $width;
+    border-bottom: 1px solid #E6E6E6;
+    transform: scaleY(0.5);
+    transform-origin: 0 0;
+}
+
+// 顶线
+@mixin topLine($width: 100%){
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $width;
+    border-top: 1px solid #E6E6E6;
+    transform: scaleY(0.5);
+    transform-origin: 0 0;
+}
+
+@mixin ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

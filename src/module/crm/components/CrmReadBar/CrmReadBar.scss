@@ -1,0 +1,54 @@
+@import '../../crmBase.scss';
+
+.crm_read_bar_wrap{
+    padding-bottom:rem(10);
+    background:#f4f4f4;
+    .crm_read_bar{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 rem(15);
+        height:rem(40);
+        color: #666;
+        font-size: rem(14);
+        line-height: rem(40);
+        background:#fff;
+        &:after{
+            @include underLine;
+        }
+        .right_arrow{
+            display: inline-block;
+            width: 6px;
+            height: 12px;
+            margin: -3px 0 0 10px;
+            background: url(../../../../assets/images/CSSSprites.png) no-repeat;
+            background-size: 76px;
+            vertical-align: middle;
+        }
+        .read_msg{
+            flex: 1;
+        }
+        .sign_read_wrap{
+            display: flex;
+            align-items: center;
+            .sign_read{
+                position: relative;
+                display: inline-block;
+                padding-left: rem(10);
+                height: rem(20);
+                line-height: rem(20);
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    border-left: 1px solid #ccc;
+                    transform: scaleX(0.5);
+                    transform-origin: 0 0;
+                }
+            }
+        }
+        
+    }
+}

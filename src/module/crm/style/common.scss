@@ -1,0 +1,76 @@
+@import '../crmBase.scss';
+
+// 列表样式
+.crm_list_wrap{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .flex_box{
+        display: flex;
+    }
+    .crm_list_header{
+        position: relative;
+        z-index: 3;
+    }
+    .crm_label_box{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .crm_search_wrap,
+    .crm_icon_wrap{
+        display: inline-block;
+    }
+    .crm_list_main{
+        flex: 1;
+        width: 100%;
+        background: #fff;
+        overflow-y: auto;
+    }
+    .crm_list_footer{
+        width: 100%;
+        height: rem(50);
+        background: #fff;
+    }
+    .no_data_tip{
+        font-size: rem(16);
+        color: #bbb;
+    }
+    .search_bar_wrap{
+        display:inline-block;
+        flex: 9;
+        vertical-align: middle;
+    }
+    .operate_btn{
+        flex: 1;
+        height: rem(43);
+        line-height: rem(43);
+        text-align: center;
+        background: #f0f0f0;
+        vertical-align: middle;
+        .hanber_icon{
+            display: inline-block;
+            width: rem(18);
+            height: rem(13);
+            background: url('~assets/images/qwui-content.png') no-repeat;
+            background-position: 0px -20px;
+            background-size: 100%;
+        }
+        .letter_icon{
+            display: inline-block;
+            width: rem(18);
+            height: rem(14);
+            background: url('~assets/images/icon_letterList.png') no-repeat;
+            background-size: 100%;
+        }
+        .dot_icon{
+            display: inline-block;
+            width: rem(18);
+            height: rem(8);
+            background: url('~assets/images/ic_diandd.png') no-repeat;
+            background-size: 100%; 
+        }     
+    }
+}

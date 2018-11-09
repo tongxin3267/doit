@@ -1,0 +1,112 @@
+.qwui-action{
+  margin-top: 10px;
+}
+
+.qwui-action_list{
+  display: flex;
+  position: relative;
+  padding: 15px;
+  line-height: 2.2;
+  font-size: 16px;
+  background-color: white;
+  overflow: hidden;
+  clear: both;
+  &:after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    border-bottom: 1px solid #ddd;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+  & .check_box{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    & input{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      visibility: hidden;
+    }
+    & span{
+      position:absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width:15px;
+      height:15px;
+      margin: auto;
+      border:1px solid #cacaca;
+      border-radius:4px;
+      background:#fff;
+    }
+    & .check_label{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 8;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      & input:checked + span{
+        background-color: #2f7dcd;
+        border:1px solid #2f7dcd;
+      }
+      & input:checked + span:after{
+        content: '';
+        width: 10px;
+        height: 4px;
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        border: 2px solid white;
+        border-top: none;
+        border-right: none;
+        border-radius: 1px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  & .msg{
+    flex: 1;
+    position: relative;
+    font-size: 16px;
+    line-height: 2.2;
+    background-color: #fff;
+    overflow: hidden;
+    & .name{
+      display: block;
+      width: 270px;
+      padding-right: 80px;
+      overflow: hidden;
+      white-space: nowrap;
+      word-wrap: normal;
+      text-overflow: ellipsis;
+      font-size: 16px;
+      color: #333;
+      line-height: normal;
+    }
+    & .description{
+      width: 320px;
+      padding-right: 0;
+      font-size: 13px;
+      color: #999;
+      line-height: normal;
+      overflow: hidden;
+      white-space: nowrap;
+      word-wrap: normal;
+      text-overflow: ellipsis;
+      & .divide{
+        margin: 0 5px;
+        color: #ccc;
+      }
+    }
+  }
+}
